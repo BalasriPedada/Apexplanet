@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Contact & To-Do App</title>
+  <link rel="stylesheet" href="task2.css"/>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Contact Form</div>
+      <ul class="nav-links">
+        <li><a href="#homeSection">Home</a></li>
+        <li><a href="#contactSection">Contact</a></li>
+        <li><a href="#aboutSection">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homeSection" class="container">
+      <h1 style="text-align: center;">Welcome to My Contact Form</h1>
+    </section>
+
+    <section id="contactSection" class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your mail" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Write a message " required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="formErrors" class="error"></p>
+      </form>
+    </section>
+
+    <section id="todoSection" class="container">
+      <h2>My To-Do List</h2>
+      <div class="todo-inputs">
+        <input type="text" id="taskInput" placeholder="Enter your task" />
+        <select id="statusInput">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section id="aboutSection" class="container">
+      <h2>About You (Dashboard)</h2>
+
+      <div id="submittedInfo">
+        <h3>Contact Information</h3>
+      </div>
+
+      <div id="aboutTasks">
+        <h3>My Tasks</h3>
+        <ul id="taskSummaryList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyApp. All rights reserved.</p>
+  </footer>
+
+  <script src="task2.js"></script>
+</body>
+</html>
